@@ -1,6 +1,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+#include "Game.h"
 #include "ResourceManager.h"
 
 int main()
@@ -30,6 +31,9 @@ int main()
         return EXIT_FAILURE;
     // Play the music
     music.play();*/
+
+    Game game(window);
+
     // Start the game loop
     while (window.isOpen())
     {
@@ -44,11 +48,15 @@ int main()
         // Clear screen
         window.clear();
 
+        game.update();
+        game.draw();
+
         // Draw the sprite
+        /*
         window.draw(sprite);
         window.draw(red);
         window.draw(blue);
-
+        */
         // Draw the string
         //window.draw(text);
         // Update the window

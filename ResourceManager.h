@@ -11,7 +11,6 @@ class ResourceManager {
 
 public:
   ResourceManager();
-  ~ResourceManager();
 
   /* loads texture by file if not already loaded and returns a reference to it */
   sf::Texture& getTexture(const std::string& filename);

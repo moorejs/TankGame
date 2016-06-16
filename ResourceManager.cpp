@@ -1,10 +1,7 @@
 #include "ResourceManager.h"
 
 ResourceManager::ResourceManager()
-{
-}
-
-ResourceManager::~ResourceManager()
+  : textures()
 {
 }
 
