@@ -1,5 +1,5 @@
 CC = g++
-CXXFLAGS = -Wall -std=c++11 -I/usr/local/Cellar/sfml/2.3_1/include
+CXXFLAGS = -Wall -std=c++14 -I/usr/local/Cellar/sfml/2.3_1/include
 LDLIBS = -L/usr/local/Cellar/sfml/2.3_1/lib -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
 EXEC = output
