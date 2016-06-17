@@ -1,5 +1,5 @@
-#ifndef INPUTMANAGER_H
-#define INPUTMANAGER_H
+#ifndef INPUTMANAGER_HPP
+#define INPUTMANAGER_HPP
 
 #include <string>
 #include <unordered_map>
@@ -18,7 +18,7 @@ public:
   void bind(const std::string& action, sf::Keyboard::Key key);
   void bind(const std::string& action, sf::Mouse::Button button);
 
-  /* inefficient method for checking if action is triggered */
+  /* way to check if action is triggered (inefficient) */
   bool triggered(const std::string& action);
 
   sf::Vector2i getMousePosition() const;

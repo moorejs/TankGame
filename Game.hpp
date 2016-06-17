@@ -1,10 +1,10 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef GAME_HPP
+#define GAME_HPP
 
 #include <SFML/Graphics.hpp>
 
-#include "InputManager.h"
-#include "SceneManager.h"
+#include "InputManager.hpp"
+#include "SceneManager.hpp"
 
 class Game {
 

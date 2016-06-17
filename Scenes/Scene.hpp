@@ -1,10 +1,10 @@
-#ifndef SCENE_H
-#define SCENE_H
+#ifndef SCENE_HPP
+#define SCENE_HPP
 
 #include <SFML/Graphics.hpp>
 
-#include "ResourceManager.h"
-#include "InputManager.h"
+#include "../ResourceManager.hpp"
+#include "../InputManager.hpp"
 
 class Scene {
 

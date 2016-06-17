@@ -1,8 +1,7 @@
 #include <iostream>
 
-#include "Game.h"
-#include "MenuScene.h"
-#include "GameScene.h"
+#include "Game.hpp"
+#include "Scenes/MenuScene.hpp"
 
 Game::Game(sf::RenderWindow& window)
   : window(&window), input(window), scenes()

@@ -1,12 +1,12 @@
-#ifndef MENUSCENE_H
-#define MENUSCENE_H
+#ifndef MENUSCENE_HPP
+#define MENUSCENE_HPP
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
-#include "InputManager.h"
-#include "Scene.h"
-#include "ResourceManager.h"
+#include "Scene.hpp"
+#include "../InputManager.hpp"
+#include "../ResourceManager.hpp"
 
 class MenuScene : public Scene {
 

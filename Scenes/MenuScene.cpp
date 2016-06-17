@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "MenuScene.h"
+#include "MenuScene.hpp"
 
 MenuScene::MenuScene(InputManager& input)
   : Scene(input), playBtn()

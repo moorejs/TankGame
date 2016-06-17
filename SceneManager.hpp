@@ -1,13 +1,13 @@
-#ifndef SCENEMANAGER_H
-#define SCENEMANAGER_H
+#ifndef SCENEMANAGER_HPP
+#define SCENEMANAGER_HPP
 
 #include <memory>
 #include <stack>
 
 #include <SFML/Graphics.hpp>
 
-#include "Scene.h"
-#include "ResourceManager.h"
+#include "Scenes/Scene.hpp"
+#include "ResourceManager.hpp"
 
 class SceneManager {
 

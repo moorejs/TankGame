@@ -1,4 +1,4 @@
-#include "ResourceManager.h"
+#include "ResourceManager.hpp"
 
 ResourceManager::ResourceManager()
   : textures()
@@ -23,7 +23,7 @@ void ResourceManager::loadTexture(const std::string& filename)
   textures[filename] = newTexture;
 }
 
-/* useful when the user want to do bulk loading of textures (e.g. during loading screen) */
+/* useful .hppen .hppe user want to do bulk loading of textures (e.g. during loading screen) */
 void ResourceManager::loadTextures(std::initializer_list<std::string> filenamesToLoad)
 {
   for (auto const& filename : filenamesToLoad) {

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "GameScene.h"
+#include "GameScene.hpp"
 
 GameScene::GameScene(InputManager& input)
   : Scene(input)

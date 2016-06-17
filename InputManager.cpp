@@ -1,4 +1,4 @@
-#include "InputManager.h"
+#include "InputManager.hpp"
 
 InputManager::InputManager(sf::RenderWindow& window)
   : window(&window), keyboard(), mouse()

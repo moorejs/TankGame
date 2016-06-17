@@ -1,9 +1,9 @@
-#ifndef GAMESCENE_H
-#define GAMESCENE_H
+#ifndef GAMESCENE_HPP
+#define GAMESCENE_HPP
 
-#include "InputManager.h"
-#include "Scene.h"
-#include "ResourceManager.h"
+#include "Scene.hpp"
+#include "../InputManager.hpp"
+#include "../ResourceManager.hpp"
 
 class GameScene : public Scene {
 
