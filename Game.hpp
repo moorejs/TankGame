@@ -9,16 +9,17 @@
 class Game {
 
 public:
-  Game(sf::RenderWindow& window);
-  ~Game();
+  Game();
+
+  void loop();
+
+private:
+  sf::RenderWindow window;
+  InputManager input;
+  SceneManager scenes;
 
   void update();
   void draw();
-
-private:
-  sf::RenderWindow* window;
-  InputManager input;
-  SceneManager scenes;
 
 };
 
