@@ -2,8 +2,15 @@
 
 void SceneManager::updateScene()
 {
-  if (!scenes.empty())
+  if (!scenes.empty()) {
     scenes.top()->update();
+
+    /* Check if we have a new scene to launch */
+    if (scenes.top()->sceneToPush != nullptr) {
+      scenes.push(std::move(scenes.top()->sceneToPush));
+      scenes.top()->start(resources);
+    }
+  }
 }
 
 void SceneManager::drawScene(sf::RenderWindow& window)

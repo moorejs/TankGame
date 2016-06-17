@@ -1,6 +1,8 @@
 #ifndef MENUSCENE_HPP
 #define MENUSCENE_HPP
 
+#include <utility>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 

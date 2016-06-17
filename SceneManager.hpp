@@ -12,7 +12,6 @@
 class SceneManager {
 
 public:
-
   void updateScene();
   void drawScene(sf::RenderWindow& window);
 
@@ -27,7 +26,6 @@ public:
   void togglePause();
 
 private:
-
   ResourceManager resources;
   std::stack<std::unique_ptr<Scene>> scenes;
 

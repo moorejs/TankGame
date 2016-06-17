@@ -9,38 +9,35 @@ GameScene::GameScene(InputManager& input)
 
 void GameScene::start(ResourceManager& resources)
 {
-  std::cout << "Initializing scene" << std::endl;
-  resources.loadTextures({"tileset.png", "cute_image.jpg"});
-  std::cout << "Done initializing" << std::endl;
+  std::cout << "Initializing game scene" << std::endl;
+  player.setTexture(resources.getTexture("tileset.png"));
+  player.setPosition(1000, 60);
 }
 
 void GameScene::stop()
 {
-  std::cout << "Ending scene" << std::endl;
+  std::cout << "Ending game scene" << std::endl;
 }
 
 void GameScene::resume()
 {
   Scene::resume();
-  std::cout << "Resuming scene" << std::endl;
+  std::cout << "Resuming game scene" << std::endl;
 }
 
 void GameScene::pause()
 {
   Scene::pause();
-  std::cout << "Pausing scene" << std::endl;
+  std::cout << "Pausing game scene" << std::endl;
 }
 
 void GameScene::update()
 {
   if (input->triggered("left"))
-    std::cout << "updating" << std::endl;
-
-  if (input->triggered("left click"))
-    std::cout << "left click" << std::endl;
+    player.move(-1.f, 0.f);
 }
 
 void GameScene::draw(sf::RenderWindow& window)
 {
-  
+  window.draw(player);
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "GameScene.hpp"
 #include "MenuScene.hpp"
 
 MenuScene::MenuScene(InputManager& input)
@@ -9,6 +10,7 @@ MenuScene::MenuScene(InputManager& input)
 
 void MenuScene::start(ResourceManager& resources)
 {
+  std::cout << "Launching menu scene" << std::endl;
   playBtn.setTexture(resources.getTexture("button_tileset.png"));
   playBtn.setTextureRect({0, 0, 100, 50});
   playBtn.setPosition(300, 300);
@@ -28,7 +30,7 @@ void MenuScene::update()
   /* horrible button example, sets texture rect every frame lol */
   if (playBtnHover) {
     if (input->triggered("left click")) {
-      std::cout << "Looks like I'll have to push the scene manager into scenes to control pushing/popping from within a scene..." << std::endl;
+      sceneToPush = std::make_unique<GameScene>(*input);
     }
     playBtn.setTextureRect({0, 50, 100, 50});
   } else {

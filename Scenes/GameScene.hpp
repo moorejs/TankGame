@@ -18,6 +18,9 @@ public:
 
   void draw(sf::RenderWindow&);
 
+private:
+  sf::Sprite player;
+
 };
 
 #endif
