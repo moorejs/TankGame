@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -std=c++14 -I/usr/local/Cellar/sfml/2.3_1/include
 LDLIBS = -L/usr/local/Cellar/sfml/2.3_1/lib -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 
 EXEC = output
-SOURCES = $(wildcard *.cpp Scenes/*.cpp)
+SOURCES = $(wildcard *.cpp scenes/*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(EXEC)

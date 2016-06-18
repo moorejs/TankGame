@@ -1,6 +1,7 @@
 #include "Constants.hpp"
 #include "Game.hpp"
-#include "Scenes/MenuScene.hpp"
+#include "scenes/GameScene.hpp"
+#include "scenes/MenuScene.hpp"
 
 Game::Game()
   : window(sf::VideoMode(Window::WIDTH, Window::HEIGHT), "Game Window"),
@@ -9,8 +10,10 @@ Game::Game()
 
   input.bind("left click", sf::Mouse::Left);
   input.bind("left", sf::Keyboard::A);
+  input.bind("right", sf::Keyboard::D);
+  input.bind("jump", sf::Keyboard::W);
 
-  scenes.pushScene<MenuScene>(input);
+  scenes.pushScene<GameScene>(input);
 
   scenes.togglePause();
 
