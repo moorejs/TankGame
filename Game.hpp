@@ -18,6 +18,11 @@ private:
   InputManager input;
   SceneManager scenes;
 
+  sf::Clock fpsClock;
+  float currentFrameTime, lastFrameTime;
+  float totalFrameTime;
+  unsigned frameCounter;
+
   void update();
   void draw();
 

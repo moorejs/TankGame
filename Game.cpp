@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Constants.hpp"
 #include "Game.hpp"
 #include "scenes/GameScene.hpp"
@@ -5,7 +7,9 @@
 
 Game::Game()
   : window(sf::VideoMode(Window::WIDTH, Window::HEIGHT), "Game Window"),
-    input(window), scenes()
+    input(window), scenes(),
+    fpsClock(), currentFrameTime(0.f), lastFrameTime(0.f),
+    totalFrameTime(0.f), frameCounter(0)
 {
 
   input.bind("left click", sf::Mouse::Left);
@@ -15,14 +19,15 @@ Game::Game()
 
   scenes.pushScene<GameScene>(input);
 
+  /* just a test */
   scenes.togglePause();
-
   scenes.togglePause();
 }
 
 void Game::loop()
 {
   while (window.isOpen()) {
+    ++frameCounter;
 
     /* should be its own function */
     sf::Event event;
@@ -40,6 +45,14 @@ void Game::loop()
 void Game::update()
 {
   scenes.updateScene();
+
+  currentFrameTime = fpsClock.restart().asSeconds();
+  lastFrameTime = currentFrameTime;
+  totalFrameTime += currentFrameTime;
+  if (frameCounter % 200 == 0) {
+    std::cout << 1.f / (totalFrameTime / 200) << std::endl;
+    totalFrameTime = 0;
+  }
 }
 
 void Game::draw()
